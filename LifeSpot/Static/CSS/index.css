@@ -1,47 +1,41 @@
-﻿/* Комбинированный селектор - применяется ко всем элементам */
-header, footer, aside, body, .navbar, .video-container {
+/* Комбинированный селектор - применяется ко всем элементам */
+header,footer,aside,body,.navbar,.video-container{
     font-family: "Helvetica 65 Medium", sans-serif;
 }
 
-/*Глобальные стили для хедеров на всём сайте*/
-header {
-    color: black;
-    padding-left: 1%;
-    padding-top: 1.2%;
+header,footer,body,.video-container{
+    background-color: linen;
 }
-/* Простые селекторы*/
-.video-container {
+
+/* Компоненты iframe со встроенным видео */
+.video-container{
     display: inline-block;
+    margin-top: 0.5em;
     padding-left: 1%;
     padding-top: 1%;
 }
 
-.navbar {
+/* Стили панели навигации */
+.navbar p{
     color: darkgray;
     padding-left: 15%;
 }
+
 /* Стили панели навигации при наведении мышью */
-.navbar p:hover {
+.navbar p:hover{
     color: aliceblue;
 }
 
-header, footer, body, .video-container {
-    background-color: linen;
+/* Глобальные стили для хедеров на всём сайте */
+header{
+    color: black;
+    padding-left: 1%;
+    padding-top: 1.2%;
 }
-
-/*Стиль хедера для главной страницы имеет приоритет,
-так как используется селектор по идентификатору*/
-#header-index {
+/* Стиль хедера для главной страницы имеет приоритет, 
+так как используется селектор по идентификатору */
+#header-index{
     color: #44453f;
-}
-
-INPUT.text {
-    border: 1px solid #ccc; /* Исходная рамка вокруг поля */
-    width: 50%; /* Ширина поля */
-}
-
-INPUT.text:focus {
-    border: 4px solid #39c; /* Рамка при получении фокуса */
 }
 
 /* Стили футера */
@@ -51,14 +45,14 @@ footer {
     font-size: medium;
     color: dimgrey;
     line-height: 66%;
-    padding-left: 1%;
+    padding-left: 1%; 
 }
 
-aside {
+aside{
     height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
     width: 10%;
     position: absolute; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
-    z-index: 1;
+    z-index: 1; 
     top: 0; /* Сайдбар будет в самой верхней части страницы */
     left: 0;
     background-color: #111; /* Черный цвет фона (задан в виде кода) */
@@ -67,6 +61,20 @@ aside {
     font-size: large;
 }
 
-body {
+body{
     padding-left: 11%;
+}
+
+a{
+    text-decoration: none;
+}
+
+input {
+    border: 2px solid darkgrey;
+    border-radius: 2px;
+    outline: none;
+}
+
+input:focus {
+    border: 4px solid dimgrey;
 }
